@@ -55,6 +55,8 @@ After installation, if you don't want the XDG environment variables to pollute y
 ```nu
 # $nu.user-autoload-dirs/clear-nux-injected.nu
 $env.config.hooks.pre_prompt = $env.config.hooks.pre_prompt? | default [] | append {
+	# UUID: 4a8e9a31-86f3-4659-b830-69ce2401f829
+
 	if ("NUX_INJECTED_CONFIG" in $env) {
 		hide-env XDG_CONFIG_HOME
 		hide-env NUX_INJECTED_CONFIG
@@ -67,6 +69,11 @@ $env.config.hooks.pre_prompt = $env.config.hooks.pre_prompt? | default [] | appe
 		hide-env XDG_DATA_HOME
 		hide-env NUX_INJECTED_DATA
 	}
+
+	$env.config.hooks.pre_prompt = (
+		$env.config.hooks.pre_prompt 
+		| where { |it| (view source $it | str contains "4a8e9a31-86f3-4659-b830-69ce2401f829") == false }
+	)
 }
 ```
 
