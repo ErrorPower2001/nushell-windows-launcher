@@ -17,7 +17,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	nuPath     := flag.String("nushell", "nu.exe", "")
+	nuPath     := flag.String("nushell", "nu", "")
 	configPath := flag.String("config", filepath.Join(userHome, ".config"), "")
 	cachePath  := flag.String("cache", filepath.Join(userHome, ".cache"), "")
 	dataPath   := flag.String("data", filepath.Join(userHome, ".local", "share"), "")
