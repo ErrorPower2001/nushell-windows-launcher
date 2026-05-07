@@ -48,6 +48,28 @@ If you use Scoop Installer, you can run:
 scoop install https://raw.githubusercontent.com/ErrorPower2001/nushell-windows-launcher/master/nushell-windows-launcher.json
 ```
 
+After installation, if you don't want the XDG environment variables to pollute your other programs, you can configure the following hooks for Nushell:
+
+>>> 在安装过后，如果你不想XDG环境变量污染你的其他程序，你可以为Nushell配置如下钩子：
+
+```nu
+# $nu.user-autoload-dirs/clear-nux-injected.nu
+$env.config.hooks.pre_prompt = $env.config.hooks.pre_prompt? | default [] | append {
+	if ("NUX_INJECTED_CONFIG" in $env) {
+		hide-env XDG_CONFIG_HOME
+		hide-env NUX_INJECTED_CONFIG
+	}
+	if ("NUX_INJECTED_CACHE" in $env) {
+		hide-env XDG_CACHE_HOME
+		hide-env NUX_INJECTED_CACHE
+	}
+	if ("NUX_INJECTED_DATA" in $env) {
+		hide-env XDG_DATA_HOME
+		hide-env NUX_INJECTED_DATA
+	}
+}
+```
+
 # Build / 构建
 
 ```
