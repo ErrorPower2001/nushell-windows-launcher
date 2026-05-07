@@ -28,9 +28,9 @@ Paths can also be customized via command-line arguments
 
 # Download, Install, Setup / 下载，安装，设置
 
-To download the prebuild executable, please read [Releases](https://github.com/ErrorPower2001/nushell-launcher/releases/).
+To download the prebuild executable, please read [Releases](https://github.com/ErrorPower2001/nushell_launcher/releases/).
 
->>> 为下载预构建二进制可执行文件，请访问 [Releases](https://github.com/ErrorPower2001/nushell-launcher/releases/)。
+>>> 为下载预构建二进制可执行文件，请访问 [Releases](https://github.com/ErrorPower2001/nushell_launcher/releases/)。
 
 
 
@@ -45,7 +45,7 @@ If you use Scoop Installer, you can run:
 >>> 如果你是 Scoop Installer 用户，也可以运行：
 
 ```
-scoop install https://raw.githubusercontent.com/ErrorPower2001/nushell-launcher/master/nushell-launcher.json
+scoop install https://raw.githubusercontent.com/ErrorPower2001/nushell_launcher/master/nushell_launcher.json
 ```
 
 After installation, if you don't want the XDG environment variables to pollute your other programs, you can configure the following hooks for Nushell:
