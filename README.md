@@ -1,22 +1,22 @@
 # Description / 描述
 
-Nushell Windows Launcher is a wrapper for nushell on Windows, and by default, the environment variables
+Nushell Launcher is a wrapper for nushell, and by default, the environment variables
 
-`XDG_CONFIG_HOME=%UserProfile%\.config\`
+`XDG_CONFIG_HOME=~\.config\`
 
-`XDG_CACHE_HOME=%UserProfile%\.cache\`
+`XDG_CACHE_HOME=~\.cache\`
 
-`XDG_DATA_HOME=%UserProfile%\.local\share\` 
+`XDG_DATA_HOME=~\.local\share\` 
 
 to replace Nushell's default `$nu.default-config-dir`, `$nu.cache-dir`, `$nu.data-dir` paths.
 
->>> Nushell Windows Launcher 是一个 Windows 上的 nushell 的包装器，默认为 Nushell 设置环境变量
+>>> Nushell Launcher 是一个 nushell 的包装器，默认为 Nushell 设置环境变量
 >>> 
->>> `XDG_CONFIG_HOME=%UserProfile%\.config\`
+>>> `XDG_CONFIG_HOME=~\.config\`
 >>> 
->>> `XDG_CACHE_HOME=%UserProfile%\.cache\`
+>>> `XDG_CACHE_HOME=~\.cache\`
 >>> 
->>> `XDG_DATA_HOME=%UserProfile%\.local\share\`
+>>> `XDG_DATA_HOME=~\.local\share\`
 >>> 
 >>> 以取代 Nushell 默认的 `$nu.default-config-dir`、`$nu.cache-dir`、`$nu.data-dir` 路径。
 
@@ -28,9 +28,9 @@ Paths can also be customized via command-line arguments
 
 # Download, Install, Setup / 下载，安装，设置
 
-To download the prebuild executable, please read [Releases](https://github.com/ErrorPower2001/nushell-windows-launcher/releases/).
+To download the prebuild executable, please read [Releases](https://github.com/ErrorPower2001/nushell-launcher/releases/).
 
->>> 为下载预构建二进制可执行文件，请访问 [Releases](https://github.com/ErrorPower2001/nushell-windows-launcher/releases/)。
+>>> 为下载预构建二进制可执行文件，请访问 [Releases](https://github.com/ErrorPower2001/nushell-launcher/releases/)。
 
 
 
@@ -45,7 +45,7 @@ If you use Scoop Installer, you can run:
 >>> 如果你是 Scoop Installer 用户，也可以运行：
 
 ```
-scoop install https://raw.githubusercontent.com/ErrorPower2001/nushell-windows-launcher/master/nushell-windows-launcher.json
+scoop install https://raw.githubusercontent.com/ErrorPower2001/nushell-launcher/master/nushell-launcher.json
 ```
 
 After installation, if you don't want the XDG environment variables to pollute your other programs, you can configure the following hooks for Nushell:
