@@ -5,7 +5,6 @@
 	"license": "Unknown",
 	"url": "https://github.com/ErrorPower2001/nushell-windows-launcher/releases/download/0.2.0/nushell_windows_launcher.exe",
 	"hash": "sha256:d067a912e73ca7ffe735bb3253277b7d77f6a1c2aa64e3e78216961971786f4f",
-	"env_add_path": "$dir",
-	"//bin": "nushell_windows_launcher.exe",
+	"env_add_path": ".",
 	"end": "end"
 }
