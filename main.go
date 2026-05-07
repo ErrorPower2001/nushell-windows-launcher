@@ -11,21 +11,19 @@ import (
 func main() {
 	userHome, err := os.UserHomeDir()
 	if err != nil {
-		fmt.Printf("无法获取用户目录：%v", err)
-		fmt.Printf("\n")
+		fmt.Printf("Unable to get user home directory: \n")
+		fmt.Printf("无法获取用户目录：\n")
+		fmt.Printf("%v", err)
 		os.Exit(1)
 	}
 
-	nuPath     := flag.String("nushell", "nu.exe", "Nushell 可执行文件的路径")
-	configPath := flag.String("config", filepath.Join(userHome, ".config"), "XDG_CONFIG_HOME 路径")
-	cachePath  := flag.String("cache", filepath.Join(userHome, ".cache"), "XDG_CACHE_HOME 路径")
-	dataPath   := flag.String("data", filepath.Join(userHome, ".local", "share"), "XDG_DATA_HOME 路径")
+	nuPath     := flag.String("nushell", "nu.exe", "")
+	configPath := flag.String("config", filepath.Join(userHome, ".config"), "")
+	cachePath  := flag.String("cache", filepath.Join(userHome, ".cache"), "")
+	dataPath   := flag.String("data", filepath.Join(userHome, ".local", "share"), "")
 
 	flag.Parse()
 
-	/*
-	hideCmd := "\"hide-env XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME\""
-	*/
 	extraArgs := flag.Args()
 
 	cmd := exec.Command(*nuPath, extraArgs...)
@@ -66,6 +64,7 @@ func main() {
 		if ok {
 			os.Exit(exitErr.ExitCode())
 		}
+		fmt.Printf("Nushell start failed: \n")
 		fmt.Printf("Nushell 启动失败：\n")
 		fmt.Printf("%v", err)
 		os.Exit(1)
