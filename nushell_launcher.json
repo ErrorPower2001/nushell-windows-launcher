@@ -4,7 +4,7 @@
 	"homepage": "https://github.com/ErrorPower2001/nushell_launcher",
 	"license": "Unknown",
 	"url": "https://github.com/ErrorPower2001/nushell_launcher/releases/download/0.2.1/nushell_launcher.exe",
-	"hash": "sha256:f4933c4b2f44316b5e0193272756ad8eb4e4dd69eef1a8ab61588cc07137abe3",
+	"hash": "sha256:0107848defa9f4549abb465c4ad120df1db823e0678770d1460680de72034485",
 	"env_add_path": ".",
 	"end": "end"
 }
