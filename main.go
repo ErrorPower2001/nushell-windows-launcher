@@ -5,10 +5,20 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"os/signal"
 	"path/filepath"
 )
 
 func main() {
+	sigChan := make(chan os.Signal, 1)
+	signal.Notify(sigChan, os.Interrupt)
+
+	go func() {
+		for {
+			<-sigChan
+		}
+	}()
+
 	userHome, err := os.UserHomeDir()
 	if err != nil {
 		fmt.Printf("Unable to get user home directory: \n")
@@ -69,4 +79,6 @@ func main() {
 		fmt.Printf("%v", err)
 		os.Exit(1)
 	}
+
+	os.Exit(0)
 }
