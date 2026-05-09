@@ -1,10 +1,10 @@
 {
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "Nushell Launcher, a wrapper of nushell.",
 	"homepage": "https://github.com/ErrorPower2001/nushell_launcher",
 	"license": "Unknown",
-	"url": "https://github.com/ErrorPower2001/nushell_launcher/releases/download/0.2.1/nushell_launcher.exe",
-	"hash": "sha256:0107848defa9f4549abb465c4ad120df1db823e0678770d1460680de72034485",
+	"url": "https://github.com/ErrorPower2001/nushell_launcher/releases/download/0.3.0/nushell_launcher.exe",
+	"hash": "sha256:3a507331e451fe0a110890a1d6a439c5fb9b09bb41d71d1d3e6712088d7ec5c5",
 	"env_add_path": ".",
 	"end": "end"
 }
